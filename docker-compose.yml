@@ -9,8 +9,8 @@ services:
         depends_on:
             - db
         command: bash -c "npx prisma migrate reset --force && npm start"
-        # networks:
-        #     - app_network
+        networks:
+            - app_network
     db:
         image: mysql:5.7
         restart: always
@@ -24,8 +24,8 @@ services:
             - "3306:3306"
         volumes:
             - db_data:/var/lib/mysql
-        # networks:
-        #     - app_network
+        networks:
+            - app_network
         healthcheck:
             test:
                 [
@@ -36,5 +36,6 @@ services:
             retries: 5
 volumes:
     db_data:
-# networks:
-#     app_network:
+networks:
+    app_network:
+        external: true
