@@ -39,15 +39,15 @@ Jika terdapat error ketika menjalankan command pertama, ignore saja error terseb
 
 ## Design Pattern
 
-1. Builder
+1. **Builder**
 
     Design pattern Builder digunakan untuk menyusun response yang dikirim. Design pattern ini digunakan karena setiap response dapat memiliki isi yang berbeda-beda sehingga dapat memudahkan dalam pembuatan response. Implementasi Builder di aplikasi ini juga menggunakan Director untuk memudahkan penggunaan.
 
-2. Singleton
+2. **Singleton**
 
     Design pattern Singleton digunakan dalam instansiasi Prisma Client sebagai ORM. Hal ini dilakukan untuk memastikan bahwa hanya satu Client yang digunakan dalam aplikasi sehingga dapat menyederhanakan penggunaan dan menjaga konsistensi.
 
-3. Decorator
+3. **Decorator**
 
     Design pattern Decorator digunakan untuk menambah fungsionalitas retry kepada Prisma Client. Hal ini dilakukan untuk mengurangi terjadinya kegagalan seandainya terjadi error sementara pada database sehingga meningkatkan reliability.
 
