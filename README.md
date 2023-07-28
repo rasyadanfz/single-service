@@ -80,4 +80,5 @@ Berikut adalah endpoint yang dibuat
 ## Bonus
 
 -   Dokumentasi API
-    Dokumentasi API Single Service dapat diakses pada http://localhost:3000/api-doc
+
+Dokumentasi API Single Service dapat diakses pada http://localhost:3000/api-doc
