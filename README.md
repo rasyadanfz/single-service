@@ -69,10 +69,15 @@ Berikut adalah endpoint yang dibuat
 -   GET /barang
 -   GET /barang/:id
 -   POST /barang
--   UPDATE /barang/:id
+-   PUT /barang/:id
 -   DELETE /barang/:id
 -   GET /perusahaan
 -   GET /perusahaan/:id
 -   POST /perusahaan
--   UPDATE /perusahaan/:id
+-   PUT /perusahaan/:id
 -   DELETE /perusahaan/:id
+
+## Bonus
+
+-   Dokumentasi API
+    Dokumentasi API Single Service dapat diakses pada http://localhost:3000/api-doc

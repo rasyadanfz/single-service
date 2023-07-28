@@ -6,6 +6,12 @@ import "dotenv/config.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import ResponseDirector from "./responseBuilder/responseDirector.js";
+import { readFile } from "fs/promises";
+import swaggerUi from "swagger-ui-express";
+
+const swaggerOutput = JSON.parse(
+    await readFile(new URL("./swagger/swagger-output.json", import.meta.url))
+);
 
 const corsOption = {
     origin: "https://ohl-fe.vercel.app",
@@ -14,6 +20,7 @@ const corsOption = {
 const app = express();
 app.use(express.json());
 app.use(cors(corsOption));
+app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
 const PORT = process.env.NODE_DOCKER_PORT || 3000;
 
 app.listen(PORT, () => {});
