@@ -7,6 +7,12 @@ Dibuat oleh Rasyadan Faza Safiqur Rahman (18221103)
 ## Cara Menjalankan
 
 1. Pastikan Docker dan Docker Compose sudah terinstall
+
+```sh
+docker -v
+docker compose version
+```
+
 2. Clone repository ini dengan menjalankan command
 
 ```sh
