@@ -43,6 +43,12 @@ Jika terdapat error ketika menjalankan command pertama, ignore saja error terseb
 
 5. Single Service dapat diakses pada URL http://localhost:3000
 
+[**Akun Admin**]
+
+Username: **adminss**
+
+Password: **adminss**
+
 ## Design Pattern
 
 1. **Builder**
