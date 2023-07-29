@@ -60,17 +60,14 @@ const insertBarang = async () => {
 
 const insertAdmin = async () => {
     const hashedPw =
-        "$2b$12$eVHZxUNXuWhOue86pwZwUumQBYqYqTBcohdUa6PTwo8LjogAkAxjy";
+        "$2y$12$VFXnSCKrJRlmR8BNGHonAOB5XvNfN5sQLYHSeMvSF7LG66ypzIEBy";
     let result = await prisma.admin.create({
         data: {
             name: "admin",
-            username: "admin123",
+            username: "adminss",
             password: hashedPw,
         },
     });
-    if (!result) {
-        console.log("Inserting admin went wrong!");
-    }
 };
 
 resetDatabase()
@@ -78,7 +75,6 @@ resetDatabase()
         await prisma.$disconnect();
     })
     .catch(async (e) => {
-        console.error(e);
         await prisma.$disconnect();
         process.exit(1);
     });
