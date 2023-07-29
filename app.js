@@ -148,7 +148,30 @@ app.get("/self", validateToken, async (req, res) => {
 app.get("/barang", async (req, res) => {
     const { q, perusahaan } = req.query;
     let listBarang;
-    if (q) {
+    if (q && perusahaan) {
+        try {
+            listBarang = await prisma.findMany("barang", {
+                where: {
+                    OR: [
+                        {
+                            nama: { contains: q },
+                        },
+                        {
+                            kode: { contains: q },
+                        },
+                    ],
+                    perusahaan_id: perusahaan,
+                },
+            });
+        } catch (e) {
+            res.send(
+                ResponseDirector.createErrorResponse(
+                    "Failed to get list of barang!"
+                )
+            );
+            return;
+        }
+    } else if (q) {
         try {
             listBarang = await prisma.findMany("barang", {
                 where: {
