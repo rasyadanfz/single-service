@@ -60,7 +60,7 @@ const insertBarang = async () => {
 
 const insertAdmin = async () => {
     const hashedPw =
-        "$2y$12$VFXnSCKrJRlmR8BNGHonAOB5XvNfN5sQLYHSeMvSF7LG66ypzIEBy";
+        "$2b$12$M0dRRHHss6Pd6M40ukJ5VuvLoFs9bBPjR5SdNc2v2CkstszR.jeeW";
     let result = await prisma.admin.create({
         data: {
             name: "admin",
